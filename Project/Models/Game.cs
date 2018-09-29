@@ -56,8 +56,9 @@ namespace CastleGrimtol.Project
             answer = answer.ToLower();
             switch(answer)
             {
-                case "east":
-                    
+                case "go":
+                Go(answer);
+                 break;   
                 
             }
             
@@ -66,8 +67,18 @@ namespace CastleGrimtol.Project
 
         public void Go(string direction)
         {
-            
+            Console.Clear();
+            Room newRoom = CurrentRoom.Advance(direction);
+
+
+            if (!CurrentRoom.Exits.ContainsKey(direction)){
+               System.Console.WriteLine("Thats not a vaild direction");
+               Console.ReadLine();
+            return;
+           }
+      CurrentRoom = newRoom;
         }
+            
 
         public void Help()
         {

@@ -22,6 +22,15 @@ namespace CastleGrimtol.Project
             System.Console.WriteLine($"{Description}");
             return;
         }
+        public Room Advance(string direction)
+{
+            if (this.Exits.ContainsKey(direction))
+{
+                return (Room)this.Exits[direction];
+}
+            return null;
+}
+
         public void PrintChosenDirection()
         {
             foreach(var option in Exits)
