@@ -7,7 +7,7 @@ namespace CastleGrimtol
     {
         public static void Main(string[] args)
         {
-            Game g = new Game();
+            Game g = new Game("name");
             g.StartGame();
         }
     }

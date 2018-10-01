@@ -12,7 +12,7 @@ namespace CastleGrimtol.Project
     void Setup();
 
     //Restarts the game 
-    void Reset();
+    void Reset(string i);
 
     //Setup and Starts the Game loop
     void StartGame();
@@ -23,10 +23,10 @@ namespace CastleGrimtol.Project
     #region Console Commands
 
     //Stops the application
-    void Quit();
+    void Quit(string i);
 
     //Should display a list of commands to the console
-    void Help();
+    void Help(string option);
 
     //Validate CurrentRoom.Exits contains the desired direction
     //if it does change the CurrentRoom
@@ -43,7 +43,7 @@ namespace CastleGrimtol.Project
     void UseItem(string itemName);
 
     //Print the list of items in the players inventory to the console
-    void Inventory();
+    void Inventory(string i );
 
     //Display the CurrentRoom Description, Exits, and Items
     void Look();

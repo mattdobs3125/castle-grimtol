@@ -24,9 +24,9 @@ namespace CastleGrimtol.Project
         }
         public Room Advance(string direction)
 {
-            if (this.Exits.ContainsKey(direction))
+            if (Exits.ContainsKey(direction))
 {
-                return (Room)this.Exits[direction];
+                return Exits[direction];
 }
             return null;
 }

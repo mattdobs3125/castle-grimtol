@@ -4,11 +4,14 @@ namespace CastleGrimtol.Project
 {
     public class Player : IPlayer
     {
-       public string PlayerName { get; set; }
+       public string Name { get; set; }
        public List<Item> Inventory { get; set; }
         public Player (string name)
         {
-            PlayerName = name;
+            Name = name;
+            Inventory = new List<Item>();
+
+
         }
     }
 }
