@@ -21,16 +21,16 @@ namespace CastleGrimtol.Project
             Room CourtYard = new Room("CourtYard", @"You in a court yard on a bench theres a cold mist lingering to the east theres a door with coat of arms over the door,
  another door to west has a large blue and silver banner with a knights helmet over it ");
             Room Barracks = new Room("Barracks", "you enter a room with large suits of armor on stands and the wall line with swords being held. You notice a set of stairs heading south down to smelly door");
-            Room GuardRoom = new Room("Guard Room", "theres stuff");
+
             Room Foyer = new Room("Foyer", "You enter a large foyer with a Door with two key holes one blue the other green maybe you need keys two keys to escape the castle");
             Room MageTower = new Room("Mage Tower", "You enter the room in the middle of the room there a large blue glowing orb way to big for you to place in your inventory so dont try. There's a large spiral staircase to the north of you that winds to a door maybe check up there for the green key ");
-            Room ThroneRoom = new Room("Guard Room", "theres stuff");
+            Room Treasury = new Room("Treasury", "You enter a room with a mountain of gold coins and jewels. No key though you only really care about keys");
             Room Dungeon = new Room("Dungeon", "You enter the room and hear the door click good thing you have that stinky green key!  ");
             Room CouncilRoom = new Room("Coucil Room", "You enter a room with a very large table with many scrolls and papers on it with a large war map scoring the back wall. You realise the a large glimmering key on the table   ");
 
             //The relationships
             CourtYard.Exits.Add("east", Barracks);
-            CourtYard.Exits.Add("north", ThroneRoom);
+            CourtYard.Exits.Add("north", Treasury);
             CourtYard.Exits.Add("south", Foyer);
             Foyer.Exits.Add("north", CourtYard);
             Dungeon.Exits.Add("north", Barracks);
@@ -180,6 +180,10 @@ namespace CastleGrimtol.Project
             }if(option == "me"){
                 Console.WriteLine("How the game works");
                 Console.WriteLine("Enter go followed by the direction. Most rooms descriptions give a clue on the ways you can go ");
+                Console.WriteLine("To see your inventory enter 'show inventory'");
+                Console.WriteLine("To take a key you need to enter take follow by the color and the word key with no space like 'take purplekey'");
+                Console.WriteLine("To reset the game enter 'reset game'");
+                Console.WriteLine("To quit the game enter 'quite game'");
 
             }
             
