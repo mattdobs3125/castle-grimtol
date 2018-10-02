@@ -18,7 +18,8 @@ namespace CastleGrimtol.Project
             Exits = new Dictionary<string, Room>();
         }
         public void GetRoomDescripition()
-        {
+        {  
+            System.Console.WriteLine($"Your in the: {Name}");
             System.Console.WriteLine($"{Description}");
             return;
         }
