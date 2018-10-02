@@ -60,17 +60,7 @@ namespace CastleGrimtol.Project
              Player p = new Player(name);
              CurrentPlayer = p;
         }
-
-
-
-
-
-
-
-
-
-
-        public void GetUserInput()
+ public void GetUserInput()
         {
             CurrentRoom.GetRoomDescripition();
             Console.WriteLine("where would you like to go? : ");
@@ -90,6 +80,8 @@ namespace CastleGrimtol.Project
                 case "show":Inventory(Option);
                 break;
                 case"quit":Quit(Option);
+                break;
+                case "look":Look(Option);
                 break;
                 default:
                 Console.WriteLine("cool... although thats not a command!!");
@@ -130,7 +122,7 @@ namespace CastleGrimtol.Project
             
         }
 
-        private void GameWin()
+        public void GameWin()
         {
             Console.WriteLine("You have escaped the castle with your life!! Good job!!!");
             Console.WriteLine("Would you like to play again?? Enter yes to play again enter no to close the game");
@@ -145,7 +137,7 @@ namespace CastleGrimtol.Project
 
         }
 
-        private void GameOver()
+        public void GameOver()
         {
             Console.WriteLine("You have gotten locked in a room and died. Would you like to play again? Enter yes if so or no if your done playing");
             Input = Console.ReadLine();
@@ -222,10 +214,6 @@ namespace CastleGrimtol.Project
           
             
         }
-        public void Look()
-        {
-            
-        }
 
         public void Quit(string i)
         {
@@ -252,6 +240,16 @@ namespace CastleGrimtol.Project
             while(playing)
             {
                 GetUserInput();
+            }
+
+        }
+        public void Look(string i)
+        {
+            if (i == "around")
+            {
+
+            Console.WriteLine($"your currently in :{CurrentRoom.Name}");
+            Console.WriteLine($"{CurrentRoom.Description}");
             }
 
         }
